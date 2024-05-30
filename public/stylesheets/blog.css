@@ -97,14 +97,25 @@ img{
     background-image: url('../images/homePage/bg2.jpeg');
     padding: 1.5rem 0;
 }
+
 .blog-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between blog items */
     margin: 2rem 0;
 }
 .blog-item {
-    margin-bottom: 75px;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+    margin-bottom: 20px; /* Ensure a gap at the bottom */
+    background: #fff; /* Add background for better visibility */
+    border-radius: 8px; /* Add border-radius for better aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 .blog-img{
     position: relative;
+}
+.blog-img img{
+    border-radius: 8px 8px 0 0; /* Round top corners */
 }
 .blog-img span{
     position: absolute;
@@ -116,9 +127,7 @@ img{
     padding: 0.3rem 0.6rem;
 }
 .blog-text{
-    margin: 2.2rem 0;
-    padding: 0 1rem;
-    height: 300px;
+    padding: 1.2rem;
 }
 .blog-text span{
     font-weight: 700;
@@ -130,7 +139,6 @@ img{
     padding: 1rem 0;
     font-size: 1.65rem;
     font-weight: 600;
-    height: 75px;
 }
 .blog-text p{
     font-weight: 600;
@@ -252,3 +260,91 @@ footer{
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media screen and (max-width: 1112px) and (min-width: 769px) {
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .navbar-brand {
+        order: 1;
+        margin-bottom: 10px; /* Add margin for spacing between logo and navbar-nav */
+    }
+
+    .navbar .navbar-nav {
+        order: 2;
+        width: 100%;
+        padding: 0; /* Remove any existing padding */
+        margin: 0; /* Remove any existing margin */
+        display: flex;
+        justify-content: center; /* Center-align anchor tags within navbar-nav */
+        align-items: center;
+    }
+
+    .navbar .navbar-nav a {
+        padding: 10px; /* Add padding to navbar links for better touch interaction */
+    }
+}
+
+
+/* New CSS for Mobile Menu */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px; /* Add margin to create some gap */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        margin-left: 0;
+    }
+
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        background-color: #0b4377;
+        position: absolute;
+        top: 100%; /* Position it right below the navbar */
+        left: 0;
+        width: 100%;
+        text-align: center; /* Center-align the menu items */
+        z-index: 20; /* Ensure it is above other content */
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .navbar-nav a {
+        padding: 1rem 0;
+        border-top: 1px solid #fff;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
