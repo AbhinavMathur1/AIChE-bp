@@ -1,59 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-:root{
+:root {
     --Playfair: 'Playfair Display', serif;
     --Quicksand: 'Quicksand', sans-serif;
     --Roboto: 'Roboto', sans-serif;
     --dark: #3c393d;
     --exDark: #45405a;
 }
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: var(--Quicksand);
 }
-body{
+body {
     line-height: 1.4;
     color: var(--dark);
     overflow-x: hidden;
 }
-.imgA{
+.imgA {
     width: 100%;
     display: block;
     margin: 35px;
-   
 }
-img{
+img {
     width: 100%;
     display: block;
 }
-.container{
+.container {
     max-width: 1310px;
     margin: 0 auto;
     padding: 0 1.2rem;
 }
-
 /* header */
-.navbar{ 
-    /* background: #686188; */
-    /* background: #45405a; */
-    /* background: #393746; */
-    /* background: rgba(238, 238, 238, 0.068);
-    background-color: #393746; */
+.navbar {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space out items */
     background-color: #0b4377;
     padding: 0px;
     margin-top: -30px;
 }
-.navbar-brand img{
-    width: 120px;
-    margin-left: 49px;
+.navbar .container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    width: 100%;
 }
-.navbar-nav{
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    width: 120px;
+    margin-left: 0; /* Adjusted to ensure alignment */
+}
+.navbar-nav {
     padding: 0.3rem 0 0.15rem 0;
     text-align: center;
 }
-.navbar-nav a{
+.navbar-nav a {
     text-transform: uppercase;
     font-family: var(--Roboto);
     letter-spacing: 1px;
@@ -65,41 +71,35 @@ img{
     letter-spacing: 3px;
     transition: opacity 0.5s ease;
 }
-.navbar-nav a:hover{
+.navbar-nav a:hover {
     opacity: 0.5;
     font-weight: bold;
     font-size: larger;
-
-    
 }
 
-.contact{
+
+.contact {
     position: relative;
     min-height: 80vh;
-    padding: 50px 100px;
+    padding: 50px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: #eee ;  */
-    /* background-image: url('/images/homePage/bg3.png'); */
     background-image: url('../images/homePage/bg2.jpeg');
     background-size: cover;
 }
-
-.contact .content{
+.contact .content {
     max-width: 800px;
     text-align: center;
 }
-
-.contact .content h2{
+.contact .content h2 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 60px;
     text-align: center;
     color: rgb(80, 79, 79);
 }
-
 .container {
     width: 100%;
     display: flex;
@@ -107,74 +107,65 @@ img{
     align-items: center;
     margin-top: 30px;
 }
-
 .container .contactInfo {
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center horizontally */
 }
-
 .container .contactInfo .box {
     position: relative;
     padding: 20px 0;
     display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
 }
-
-.container .box .text .social-handles{
-	padding-top: 0px;
+.container .box .text .social-handles {
+    padding-top: 0px;
 }
-.container .box .text  .social-handles a{
-	display: inline-block;
-	height: 42px;
-	width: 42px;
-	background-color: #ffffff;
-	color:#000000;
-	border-radius: 50%;
-	margin:0 2px;
-	text-align: center;
-	line-height: 42px;
-	font-size:16px;
-	transition: all .5s ease;
+.container .box .text .social-handles a {
+    display: inline-block;
+    height: 42px;
+    width: 42px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    margin: 0 5px; /* Adjusted margin for spacing */
+    text-align: center;
+    line-height: 42px;
+    font-size: 16px;
+    transition: all .5s ease;
 }
-
-.container .box .text  .social-handles a:hover{
-	box-shadow: 0 0 10px #000;
+.container .box .text .social-handles a:hover {
+    box-shadow: 0 0 10px #000;
 }
-
 .container .contactInfo .box .text {
-    display: flex;
-    margin-left: 40px;
     font-size: 20px;
     color: rgb(0, 0, 0);
-    flex-direction: column;
     font-weight: 500;
 }
-
 .container .contactInfo .box .text h3 {
     font-weight: 800;
     color: #065096;
     margin-bottom: 20px;
 }
-
 .contactForm {
     width: 40%;
     padding: 40px;
     background: #fff;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .contactForm h2 {
     font-size: 30px;
     color: #333;
     font-weight: 500;
 }
-
 .contactForm .inputBox {
     position: relative;
     width: 100%;
     margin-top: 10px;
 }
-
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
     width: 100%;
@@ -186,7 +177,6 @@ img{
     outline: none;
     resize: none;
 }
-
 .contactForm .inputBox span {
     position: absolute;
     left: 0;
@@ -197,7 +187,6 @@ img{
     transition: 0.5s;
     color: #666;
 }
-
 .contactForm .inputBox input:focus ~ span, 
 .contactForm .inputBox input:valid ~ span,
 .contactForm .inputBox textarea:focus ~ span, 
@@ -206,10 +195,8 @@ img{
     font-size: 12px;
     transform: translateY(-20px);
 }
-
 .contactForm .inputBox input[type="submit"] {
     width: 100px;
-    /* background: #726a95; */
     background: #065096;
     color: #fff;
     border: none;
@@ -218,83 +205,173 @@ img{
     font-size: 18px;
     border-radius: 5%;
 }
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .contact {
-        padding: 50px;
+        padding: 50px 20px; /* Adjusted padding for smaller screens */
+        text-align: center; /* Center text for smaller screens */
     }
-    .content h2{
+    .contact .content h2 {
         font-size: 2rem;
     }
-
     .container {
-        flex-direction:  column;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
     }
-    .container .contactInfo {
-        margin-bottom: 40px;
+    .container .contactInfo
+     {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 600px; /* Limit maximum width for readability */
+        margin-bottom: 20px; /* Space between elements */
     }
-    .container .contactInfo, .contactForm {
-        /* width: 100%; */
-        width: 70%;
-        height: 70%;
+
+     .contactForm{
+
+        max-width: 600px; 
+        width: auto;
+
+    }
+
+
+
+
+    .container .contactInfo .box {
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text for smaller screens */
+    }
+    .container .contactInfo .box .text {
+        margin-left: 0; /* Remove left margin for centering */
+    }
+    .container .contactInfo .box .text .social-handles {
+        justify-content: center; /* Center social icons */
     }
 }
-
-/* Media Queries */
-@media screen and (min-width: 540px){
-    .navbar-nav a{
+@media screen and (min-width: 540px) {
+    .navbar-nav a {
         padding-right: 1.2rem;
         padding-left: 1.2rem;
     }
-    .banner-title{
+    .banner-title {
         font-size: 5rem;
     }
-    .banner form{
+    .banner form {
         margin-top: 1.4rem;
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 }
-
-@media screen and (min-width: 768px){
-    .navbar .container{
+@media screen and (min-width: 768px) {
+    .navbar .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .search-input{
+    .search-input {
         padding: 0.8rem 0;
     }
-    .design-content{
+    .design-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-    .design-item{
+    .design-item {
         margin: 0;
     }
-    .blog-content{
+    .blog-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 }
-
-@media screen and (min-width: 992px){
-    .blog-content{
+@media screen and (min-width: 992px) {
+    .blog-content {
         grid-template-columns: repeat(3, 1fr);
     }
-    .about-content{
+    .about-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3rem;
         align-items: center;
     }
 }
-
-@media screen and (min-width: 1200px){
-    .design-content{
+@media screen and (min-width: 1200px) {
+    .design-content {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar .navbar-brand {
+        order: 1;
+        margin-bottom: 10px; /* Add margin for spacing between logo and navbar-nav */
+    }
+    .navbar .navbar-nav {
+        order: 2;
+        width: 100%;
+        padding: 0; /* Remove any existing padding */
+        margin: 0; /* Remove any existing margin */
+        display: flex;
+        justify-content: center; /* Center-align anchor tags within navbar-nav */
+        align-items: center;
+    }
+    .navbar .navbar-nav a {
+        padding: 10px; /* Add padding to navbar links for better touch interaction */
+    }
+}
+/* New CSS for Mobile Menu */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px; /* Add margin to create some gap */
+}
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand img {
+        margin-left: 0;
+    }
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        background-color: #0b4377;
+        position: absolute;
+        top: 100%; /* Position it right below the navbar */
+        left: 0;
+        width: 100%;
+        text-align: center; /* Center-align the menu items */
+        z-index: 20; /* Ensure it is above other content */
+    }
+    .navbar-nav.active {
+        display: flex;
+    }
+    .navbar-nav a {
+        padding: 1rem 0;
+        border-top: 1px solid #fff;
+    }
+    .container {
+        padding: 0 0.5rem;
+    }
+    .navbar .container{
+        flex-direction: row;
+    }
+    .menu-icon {
+        display: block;
+        margin-left: auto; /* Ensure the menu icon is on the rightmost end */
     }
 }
