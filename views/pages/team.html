@@ -10,24 +10,33 @@
     <!-- Font awesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../public/stylesheets/team.css">
+      <script>
+        function toggleMenu() {
+          const navbarNav = document.querySelector('.navbar-nav');
+          navbarNav.classList.toggle('active');
+        }
+      </script>
   </head>
 
 <body>
     <!-- header -->
     <header>
-        <nav class = "navbar">
-          <div class = "container">
-            <a href = "../../index.html" class = "navbar-brand"><img class="imgA" src ="../../public/images/homePage/logoA.png" ></a>
-            <div class = "navbar-nav">
-              <a href = "../../index.html">Home</a>
-              <a href = "blog.html">Blog</a>
-              <a href = "Events.html">Events</a>
-              <a href = "../../public/business brochure/AIChE Spons forum.pdf" target="_blank">Sponsor's Forum</a>
-              <a href = "team.html">The Board</a>
-              <a href = "contact.html">Contact</a>
+        <nav class="navbar">
+            <div class="container">
+                <a href = "../../index.html" class = "navbar-brand"><img class="imgA" src ="../../public/images/homePage/logoA.png" ></a>
+              <div class="navbar-nav">
+                <a href = "../../index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="Events.html">Events</a>
+                <a href = "../../public/business brochure/AIChE Spons forum.pdf" target="_blank">Sponsor's Forum</a>
+                <a href="team.html">The Board</a>
+                <a href="contact.html">Contact</a>
+              </div>
+              <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
       </header>
 <!-- end of header -->
 
